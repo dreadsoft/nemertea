@@ -1,5 +1,5 @@
 <h2>Anamnesi</h2>
-
+<div class="text-right"></div>
 <?php
 
 $dati = $ana['Anamnesi'];
@@ -85,7 +85,7 @@ echo $this->BS->panel("Anamnesi patologica", $patologica, 'primary');
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 class="modal-title" id="eventoanamnesilabel">Nuovo evento anamesi</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="eventoanamnesibody">
                 
                 <?php
                     echo $this->Form->create('Anamnesievento', array('type' => 'post', 'action' => '', 'default' => false));
@@ -178,7 +178,16 @@ echo $this->BS->panel("Anamnesi patologica", $patologica, 'primary');
     
     function anamnesievento_modifica (idevento)
     {
-        alert('Funzione al momento non disponibile!');
+        
+        $.ajax(
+        {    async:false, 
+             dataType:"html", 
+             success:function (data, textStatus) {$("#eventoanamnesibody").html(data);}, 
+             type:"POST", 
+             url:"\/anamnesieventi/modifica/" + idevento}
+        );
+
+        $('#eventoanamnesimodal').modal('show');
     }
     
 

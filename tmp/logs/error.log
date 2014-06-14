@@ -5139,3 +5139,176 @@ Request URL: /js/jquery.min.map
 Stack Trace:
 #0 C:\Users\dreadsoft\Desktop\xampp\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-06-14 09:22:10 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /anamnesieventi/modifica/2
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Anamnes...', Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(665): DboSource->execute('SELECT `Anamnes...', Array, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1077): DboSource->fetchAll('SELECT `Anamnes...', false)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(2902): DboSource->read(Object(Anamnesievento), Array)
+#5 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(2874): Model->_readDataSource('first', Array)
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\AnamnesieventiController.php(40): Model->find('first', Array)
+#7 [internal function]: AnamnesieventiController->modifica('2')
+#8 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AnamnesieventiController), Array)
+#9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesieventiController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-06-14 09:27:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-14 09:33:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-14 09:38:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-14 09:42:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-14 09:42:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-14 09:42:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-14 09:43:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'paziente_id'
+Request URL: /anamnesi/modifica/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ne...', Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `ne...')
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(1832): DboSource->create(Object(Anamnesi), Array, Array)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\AnamnesiController.php(119): Model->save(Array)
+#5 [internal function]: AnamnesiController->modifica('1')
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AnamnesiController), Array)
+#7 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesiController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-14 09:43:46 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'paziente_id'
+Request URL: /anamnesi/modifica/0
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ne...', Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `ne...')
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(1832): DboSource->create(Object(Anamnesi), Array, Array)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\AnamnesiController.php(119): Model->save(Array)
+#5 [internal function]: AnamnesiController->modifica('0')
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AnamnesiController), Array)
+#7 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesiController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-14 09:43:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'paziente_id'
+Request URL: /anamnesi/modifica/2
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ne...', Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `ne...')
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(1832): DboSource->create(Object(Anamnesi), Array, Array)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\AnamnesiController.php(119): Model->save(Array)
+#5 [internal function]: AnamnesiController->modifica('2')
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AnamnesiController), Array)
+#7 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesiController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-14 09:43:52 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'paziente_id'
+Request URL: /anamnesi/modifica/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ne...', Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `ne...')
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(1832): DboSource->create(Object(Anamnesi), Array, Array)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\AnamnesiController.php(119): Model->save(Array)
+#5 [internal function]: AnamnesiController->modifica('1')
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AnamnesiController), Array)
+#7 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesiController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-14 09:44:26 Error: [MissingActionException] Action PazientiController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'PazientiController',
+  'action' => 'index.html',
+)
+Request URL: /pazienti/index.html
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PazientiController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-14 09:44:34 Error: [MissingActionException] Action PazientiController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'PazientiController',
+  'action' => 'index.html',
+)
+Request URL: /pazienti/index.html
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PazientiController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-14 17:54:43 Error: [MissingActionException] Action AnamnesiController::inserici() could not be found.
+Exception Attributes: array (
+  'controller' => 'AnamnesiController',
+  'action' => 'inserici',
+)
+Request URL: /anamnesi/inserici/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesiController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-14 17:54:51 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'paziente_id'
+Request URL: /anamnesi/modifica/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ne...', Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `ne...')
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(1832): DboSource->create(Object(Anamnesi), Array, Array)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\AnamnesiController.php(119): Model->save(Array)
+#5 [internal function]: AnamnesiController->modifica('1')
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AnamnesiController), Array)
+#7 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesiController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

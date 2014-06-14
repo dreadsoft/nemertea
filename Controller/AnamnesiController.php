@@ -76,8 +76,16 @@ class AnamnesiController extends AppController {
                                
 	}
 	
-	public function inserisci () {
-		$this->set("paziente_id", $this->Session->read("Paziente.id"));
+	public function inserisci ($paziente_id = null) {
+            if ($paziente_id == null) {
+                $this->set("paziente_id", $this->Session->read("Paziente.id"));
+            }
+            else {
+                $this->set('paziente_id', $paziente_id);
+            }
+		
+                
+                // Diagnosi principale *****************************************
 		$this->loadModel('CodDiagnosiPrincipale');
 		$cod = $this->CodDiagnosiPrincipale->find(  'all', 
                     array('fields' => array('codice', 'nome')
@@ -90,9 +98,17 @@ class AnamnesiController extends AppController {
 			$nome = $val['CodDiagnosiPrincipale']['nome'];
 			$cod_diagnosi[$codice] = $nome;
 		}
-		
-		
-		$this->set(	'diagnosi_principale', $cod_diagnosi);
+                
+		$this->set('diagnosi_principale', $cod_diagnosi);
+
+                // Caricamento dati paziente, se esistenti *********************
+                $anamnesi = $this->Anamnesi->find('first', array(
+		'conditions' => array('Anamnesi.paziente_id' => $paziente_id)
+		));
+                
+                $this->data = $anamnesi;
+                
+                
 
 	}
 
