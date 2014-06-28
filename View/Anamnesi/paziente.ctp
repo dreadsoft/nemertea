@@ -1,5 +1,12 @@
 <h2>Anamnesi</h2>
-<div class="text-right"></div>
+<div class="text-right">
+    <button class="btn btn-warning" onclick="anamnesi_modifica(<?php echo $this->Session->read("Paziente.id");?>)">
+        <i class="fa fa-pencil fa-fw"></i>
+        Modifica anamnesi
+    </button>
+    
+</div>
+<br>
 <?php
 
 $dati = $ana['Anamnesi'];
@@ -188,6 +195,10 @@ echo $this->BS->panel("Anamnesi patologica", $patologica, 'primary');
         );
 
         $('#eventoanamnesimodal').modal('show');
+    }
+    
+    function anamnesi_modifica (id) {
+        location = "/anamnesi/inserisci/" + id;
     }
     
 

@@ -109,7 +109,8 @@ CakeLog::config('error', array(
 
 
 $plurali = array(	'paziente'      		=> 'pazienti', 
-                        'visita'                        => 'visite', 
+                        'visita'                        => 'visite',
+                        'tipovisita'                    => 'tipovisita',
                         'emogasanalisi'                 => 'emogasanalisi',
                         'anamnesi'                      => 'anamnesi',
                         'anamnesievento' 		=> 'anamnesieventi',

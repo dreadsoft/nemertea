@@ -5312,3 +5312,406 @@ Stack Trace:
 #8 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesiController), Object(CakeRequest), Object(CakeResponse))
 #9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2014-06-14 18:50:43 Error: [MissingActionException] Action AnamnesiController::pazienti() could not be found.
+Exception Attributes: array (
+  'controller' => 'AnamnesiController',
+  'action' => 'pazienti',
+)
+Request URL: /anamnesi/pazienti/inserisci/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesiController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-28 11:51:35 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'paziente_id'
+Request URL: /anamnesi/modifica/index.html
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ne...', Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `ne...')
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(1832): DboSource->create(Object(Anamnesi), Array, Array)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\AnamnesiController.php(119): Model->save(Array)
+#5 [internal function]: AnamnesiController->modifica('index.html')
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AnamnesiController), Array)
+#7 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesiController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-28 11:51:37 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'paziente_id'
+Request URL: /anamnesi/modifica/index.html
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ne...', Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `ne...')
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(1832): DboSource->create(Object(Anamnesi), Array, Array)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\AnamnesiController.php(119): Model->save(Array)
+#5 [internal function]: AnamnesiController->modifica('index.html')
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AnamnesiController), Array)
+#7 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(AnamnesiController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-28 11:51:42 Error: [MissingActionException] Action PazientiController::riepilogo() could not be found.
+Exception Attributes: array (
+  'controller' => 'PazientiController',
+  'action' => 'riepilogo',
+)
+Request URL: /pazienti/riepilogo/2
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PazientiController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-28 11:51:45 Error: [MissingActionException] Action PazientiController::riepilogo() could not be found.
+Exception Attributes: array (
+  'controller' => 'PazientiController',
+  'action' => 'riepilogo',
+)
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PazientiController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-28 12:22:23 Error: Fatal Error (64): Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\VisiteController.php, line 11]
+2014-06-28 12:22:23 Error: [FatalErrorException] Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+Request URL: /visite/nuova
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot use isse...', 'C:\Users\dreads...', 11)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use isse...', 'C:\Users\dreads...', 11, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 64, 'Cannot use isse...', 'C:\Users\dreads...', 11, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 12:23:26 Error: [MissingControllerException] Controller class VisitaController could not be found.
+Exception Attributes: array (
+  'class' => 'VisitaController',
+  'plugin' => NULL,
+)
+Request URL: /visita/nuova
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-28 12:42:55 Error: [MissingTableException] Table tipovisitas for model Tipovisita was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'tipovisitas',
+  'class' => 'Tipovisita',
+  'ds' => 'default',
+)
+Request URL: /visite/nuova/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('tipovisitas')
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(1355): Model->getDataSource()
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(1447): Model->schema()
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(1434): Model->hasField('title', false)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(880): Model->hasField(Array)
+#5 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(3069): Model->__get('displayField')
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(2934): Model->_findList('before', Array)
+#7 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(2869): Model->buildQuery('list', Array)
+#8 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\VisiteController.php(15): Model->find('list')
+#9 [internal function]: VisiteController->nuova('1')
+#10 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VisiteController), Array)
+#11 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(VisiteController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-06-28 13:17:22 Error: [MissingActionException] Action VisiteController::modifica() could not be found.
+Exception Attributes: array (
+  'controller' => 'VisiteController',
+  'action' => 'modifica',
+)
+Request URL: /visite/modifica
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(VisiteController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-28 13:26:43 Error: Fatal Error (1): Call to undefined method VisiteController::data() in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\VisiteController.php, line 30]
+2014-06-28 13:26:43 Error: [FatalErrorException] Call to undefined method VisiteController::data()
+Request URL: /visite/modifica
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\Users\dreads...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\Users\dreads...', 30, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\Users\dreads...', 30, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 13:27:11 Error: Fatal Error (1): Call to undefined method VisiteController::request() in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\VisiteController.php, line 30]
+2014-06-28 13:27:11 Error: [FatalErrorException] Call to undefined method VisiteController::request()
+Request URL: /visite/modifica
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\Users\dreads...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\Users\dreads...', 30, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\Users\dreads...', 30, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 14:08:57 Error: [MissingControllerException] Controller class VisitaController could not be found.
+Exception Attributes: array (
+  'class' => 'VisitaController',
+  'plugin' => NULL,
+)
+Request URL: /visita/elenco/
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-28 14:10:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-28 14:11:38 Error: [MissingControllerException] Controller class VisitaController could not be found.
+Exception Attributes: array (
+  'class' => 'VisitaController',
+  'plugin' => NULL,
+)
+Request URL: /visita/
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-28 14:11:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-28 14:12:00 Error: [MissingControllerException] Controller class VisitaController could not be found.
+Exception Attributes: array (
+  'class' => 'VisitaController',
+  'plugin' => NULL,
+)
+Request URL: /visita/elenco/
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-28 14:12:42 Error: [MissingControllerException] Controller class VisitaController could not be found.
+Exception Attributes: array (
+  'class' => 'VisitaController',
+  'plugin' => NULL,
+)
+Request URL: /visita/elenco/
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-28 14:12:43 Error: [MissingControllerException] Controller class VisitaController could not be found.
+Exception Attributes: array (
+  'class' => 'VisitaController',
+  'plugin' => NULL,
+)
+Request URL: /visita/elenco/
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-28 14:12:44 Error: [MissingControllerException] Controller class VisitaController could not be found.
+Exception Attributes: array (
+  'class' => 'VisitaController',
+  'plugin' => NULL,
+)
+Request URL: /visita/elenco/
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-28 14:13:05 Error: [MissingActionException] Action PazientiController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'PazientiController',
+  'action' => 'index.html',
+)
+Request URL: /pazienti/index.html
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PazientiController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-28 15:55:32 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:55:32 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:55:49 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:55:49 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:55:50 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:55:50 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:57:49 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:57:49 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:57:54 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:57:54 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:58:38 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:58:38 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:58:39 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:58:39 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:58:39 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:58:39 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:58:41 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:58:41 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:58:49 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:58:49 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:58:50 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:58:50 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:58:51 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 15:58:51 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 15:58:56 Error: [MissingTableException] Table visites for model Visite was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'visites',
+  'class' => 'Visite',
+  'ds' => 'default',
+)
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('visites')
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1063): Model->getDataSource()
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(2902): DboSource->read(Object(Paziente), Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(2874): Model->_readDataSource('first', Array)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(597): Model->find('first', Array)
+#5 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(800): DboSource->query('findById', Array, Object(Paziente))
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\PazientiController.php(44): Model->__call('findById', Array)
+#7 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\PazientiController.php(44): Paziente->findById('1')
+#8 [internal function]: PazientiController->riepilogo('1')
+#9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PazientiController), Array)
+#10 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PazientiController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-06-28 16:00:25 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 16:00:25 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 16:00:36 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php, line 1063]
+2014-06-28 16:00:36 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+Request URL: /pazienti/riepilogo/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\dreads...', 1063, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-28 16:06:59 Error: [MissingViewException] View file "C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\View\Visite\elenco.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\dreadsoft\\Desktop\\nemertea\\htdocs\\app\\View\\Visite\\elenco.ctp',
+)
+Request URL: /visite/elenco/1
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\View\View.php(463): View->_getViewFileName(NULL)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(VisiteController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-06-28 16:07:04 Error: [MissingViewException] View file "C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\View\Visite\elenco.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\dreadsoft\\Desktop\\nemertea\\htdocs\\app\\View\\Visite\\elenco.ctp',
+)
+Request URL: /visite/elenco/index.html
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\View\View.php(463): View->_getViewFileName(NULL)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(VisiteController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

@@ -1,7 +1,6 @@
 <?php
 class PazientiController extends AppController {
-	public $hasMany = 'Emogasanalisi';
-	
+
 	public function index () {
 		$this->set('pazienti', $this->Paziente->find('all'));
                 $this->Session->delete("Paziente");
@@ -32,6 +31,29 @@ class PazientiController extends AppController {
             $pazienti = $this->Paziente->find('all', array('conditions' => array('OR' => $conditions)));
             $this->set('pazienti', $pazienti);
             $this->Session->delete('Paziente');
+            
+            
+        }
+        
+        public function riepilogo ($paziente_id = null)
+        {
+            if ($paziente_id == null) return $this->redirect('/pazienti/index');
+            
+            // Collego la tabella visite
+            $this->Paziente->bindModel(array('hasMany' => array('Visita')));
+                
+            // Carico le informazioni del paziente
+            $paz = $this->Paziente->findById($paziente_id);
+            
+
+                
+            // Salvo i dati del paziente nella sessione
+            $this->Session->write("Paziente.id", $paziente_id);
+            $this->Session->write("Paziente.nome", $paz['Paziente']['cognome'] . " " . $paz['Paziente']['nome']);
+
+            
+            $this->set('paziente_id', $paziente_id);
+            $this->set('paz', $paz);
             
             
         }

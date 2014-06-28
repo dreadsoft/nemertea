@@ -16,7 +16,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('Nemertea - Cartella clinica');
+$cakeDescription = 'Nemertea - Cartella clinica';
 
 ?>
 <!DOCTYPE html>
@@ -201,7 +201,7 @@ $cakeDescription = __d('Nemertea - Cartella clinica');
                                 <a href="/pazienti/nuovo"><i class="fa fa-user"></i> Paziente</a>
                             </li>
                             <li>
-                                <a href="/visite/nuova"><i class="fa fa-medkit"></i> Visita</a>
+                                <a href="/visite/nuova/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-medkit"></i> Visita</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
