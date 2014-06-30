@@ -114,7 +114,8 @@ $plurali = array(	'paziente'      		=> 'pazienti',
                         'emogasanalisi'                 => 'emogasanalisi',
                         'anamnesi'                      => 'anamnesi',
                         'anamnesievento' 		=> 'anamnesieventi',
-                        'cod_diagnosi_principale' 	=> 'cod_diagnosi_principale'
+                        'cod_diagnosi_principale' 	=> 'cod_diagnosi_principale',
+                        'indagine'                      => 'indagini'
                 );
 
 Inflector::rules("plural", array("irregular" => $plurali ));

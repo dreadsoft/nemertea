@@ -10,8 +10,8 @@
     echo "</div>";
     echo $this->Form->input('evento');
     echo $this->Form->input('descrizione');
-
-    echo $this->Form->input('icd9cm');
+ 
+   echo $this->Form->input('icd9cm');
 
     echo $this->Form->end();
     echo "<div id=\"eventocreaoutput\"></div>";

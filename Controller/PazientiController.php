@@ -39,23 +39,37 @@ class PazientiController extends AppController {
         {
             if ($paziente_id == null) return $this->redirect('/pazienti/index');
             
-            // Collego la tabella visite
-            $this->Paziente->bindModel(array('hasMany' => array('Visita')));
+            /*
+             * Collego la tabella visite
+             */
+            $this->Paziente->bindModel(
+                array(  'hasMany' => 
+                    array(
+                        'Visita' => array(
+                            'order' => "Visita.data_visita DESC"
+                        )
+                    )
+                )
+            );
                 
-            // Carico le informazioni del paziente
+            /*
+             * Carico le informazioni del paziente
+             */
             $paz = $this->Paziente->findById($paziente_id);
             
-
                 
-            // Salvo i dati del paziente nella sessione
+            /*
+             * Salvo i dati del paziente nella sessione
+             */
             $this->Session->write("Paziente.id", $paziente_id);
             $this->Session->write("Paziente.nome", $paz['Paziente']['cognome'] . " " . $paz['Paziente']['nome']);
 
             
+            /*
+             * Imposto le variabili per il rendering
+             */
             $this->set('paziente_id', $paziente_id);
             $this->set('paz', $paz);
-            
-            
-        }
-}
+        }}
+
 ?>

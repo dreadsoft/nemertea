@@ -5,3 +5,26 @@ h2 {
     color: #428bca;
 
 }
+
+
+.sezioni-etichette {
+    list-style: none;
+}
+
+
+.sezioni-etichette li p{
+    white-space: pre;
+    border-top: solid 1px #428bca;
+    margin-top: -2ex;
+    margin-left: 3px;
+    padding-top: 4ex;
+    background-color: #FEFEFE;
+}
+
+.sezioni-etichette footer {
+    text-align: right;
+    font-style: italic;
+    color: #AAAAAA;
+}
+
+

@@ -17,7 +17,6 @@ class AnamnesieventiController extends AppController {
                 $this->autoRender = false;
                 $dati = $this->request['data']['Anamnesievento'];
                 $this->Anamnesievento->save($dati);
-                
                 return("Evento salvato");
 	}
         

@@ -46,6 +46,7 @@ $cakeDescription = 'Nemertea - Cartella clinica';
     echo $this->Html->css("bootstrap.min.css");
 	echo $this->Html->css("font-awesome/css/font-awesome.css");
 	echo $this->Html->css("sb-admin.css");
+        echo $this->Html->css("main.css");
 	?>
 </head>
 <body>
@@ -97,30 +98,8 @@ $cakeDescription = 'Nemertea - Cartella clinica';
                     <a  title="Visite" class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-medkit fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">40% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
+                    <ul class="dropdown-menu dropdown-tasks" id='toolbar_ultime_visite'>
+                        
                     </ul>
                     <!-- /.dropdown-tasks -->
                 </li>
@@ -186,14 +165,9 @@ $cakeDescription = 'Nemertea - Cartella clinica';
                             </span>
                            <!-- /input-group -->
                     </li>
-
-					
-					<li><a href="index.html"><i class="fa fa-home fa-fw"></i> Riepilogo</a></li>
+					<li><a href="/pazienti/riepilogo/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-home fa-fw"></i> Riepilogo</a></li>
 					<li><a href="/anamnesi/paziente/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-th-list fa-fw"></i> Anamnesi</a></li>
-					<li><a href=""><i class="fa fa-file-text fa-fw"></i> Documenti</a></li>
-					
-
-					
+                                        <li><a href="/visite/elenco/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-medkit fa-fw"></i> Visite</a></li>
 					<li>
                         <a href="#"><i class="fa fa-plus-circle fa-fw"></i> Nuovo<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -217,8 +191,8 @@ $cakeDescription = 'Nemertea - Cartella clinica';
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-					<?php echo $this->Session->flash(); ?>
-					<?php echo $this->fetch('content'); ?>
+                    <?php echo $this->Session->flash(); ?>
+                    <?php echo $this->fetch('content'); ?>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -228,7 +202,7 @@ $cakeDescription = 'Nemertea - Cartella clinica';
 
     </div>
 	
-	<?php echo $this->element('sql_dump'); 
+	<?php // echo $this->element('sql_dump'); 
 	
 	// CORE SCRIPT
     echo $this->Html->script("jquery-1.10.2.js");
@@ -240,7 +214,7 @@ $cakeDescription = 'Nemertea - Cartella clinica';
 	?>
     
     
-    <script>
+    <script type='text/javascript'>
         function cerca_paziente () {
             searchstring = $("#input-cerca").val();
             window.location= "/pazienti/cerca/" + searchstring;
@@ -251,6 +225,29 @@ $cakeDescription = 'Nemertea - Cartella clinica';
             alert($("#" + id_elemento).html());
         }
         
+        
+        function ultime_visite() {
+            
+            id_paziente = '<?php echo $this->Session->read("Paziente.id");?>';
+            if (id_paziente == "") return;
+            
+            $.ajax(
+            {    async:false, 
+                 dataType:"html", 
+                 success:function (data, textStatus) {$("#toolbar_ultime_visite").html(data);}, 
+                 type:"POST", 
+                 url:"\/visite/ultime/" + id_paziente}
+            );
+
+        }
+         
+       $(document).ready(function() {
+           ultime_visite();
+       });
+       
+        
     </script>
+    
+    
 </body>
 </html>
