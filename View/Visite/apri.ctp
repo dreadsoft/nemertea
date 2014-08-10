@@ -9,7 +9,8 @@ echo "</h2>";
 
 ?>
 
-<div class="text-center">
+<div class="well text-center">
+    
 <div class="btn-group">
     <button class="btn navbar-btn btn-default" onclick="aggiungi_eventoanamnesi()" title="Aggiornamento anamnestico">
         <i class="fa fa-th-list"></i> Anamnesi
@@ -40,15 +41,24 @@ echo "</h2>";
         </ul>
     </div>
     
-    
-    <button class="btn navbar-btn btn-default" title="Radiologia">
-        <i class="fa fa-lightbulb-o"></i> Radiologia
+    <div class="btn-group">
+    <button type="button" class="btn navbar-btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-lightbulb-o"></i> 
+        Radiologia <span class="caret"></span>
     </button>
+        <ul class="dropdown-menu text-left" role="menu" id="listaEsamiRadiologia">
+            <?php echo $pulsante_radiologia; ?>
+        </ul>
+    </div>
     
 </div>
 </div>
 
-
+<!-- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AREA DIARIO CLINICO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
 
 <?php
 
@@ -58,8 +68,26 @@ echo "</h2>";
     
     $diario .= "<div class=\"text-right col-md-offset-8\">";
     $diario .= $this->Form->input("effettuata_da", array("label" => ""));
-    $diario .= '<input class="btn btn-small btn-success" type="submit" value="Salva diario">' . "</div>";
-    echo $this->BS->panel("Diario clinico", $diario, "success");
+    $diario .= '<button class="btn btn-small btn-primary" type="submit"><i class="fa fa-floppy-o"></i> Salva diario</button>' . "</div>";
+    echo $this->BS->panel("Diario clinico", $diario, "primary");
+?>
+
+<!-- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AREA ESAMI DI LABORATORIO 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<div id="areaEsamiDiLaboratorio"> </div>
+
+<?php
+foreach ($indagini_laboratorio as $indagine) {
+    
+    // echo  $this->BS->panel(ucfirst($indagine), "", 'success', strtolower($indagine));
+    $indagine = strtolower($indagine);
+    if ($indagine !== "emogasanalisi") $indagine = "lab_" . $indagine;
+    echo "\n<script>$.get( \"/laboratorio/vista_blocco/{$indagine}\", function(data) { $(data).appendTo('#areaEsamiDiLaboratorio')})</script>";
+
+}
 ?>
 
 
@@ -75,7 +103,7 @@ echo "</h2>";
       </div>
         
         <div class="text-right modal-footer" id="VGM_footer">
-            <button id="VGM_invia_button" class="btn btn-success" onclick="VGM_invia_button_click(); return false;">Salva</button>
+            <button id="VGM_invia_button" class="btn btn-success" onclick="VGM_invia_button_click(); return(false);">Salva</button>
             <br><br>
             <div class="alert alert-warning" id="VGM_output"></div>
             
@@ -87,7 +115,8 @@ echo "</h2>";
 
 <pre>
 <?php
-print_r($this->data);
+
+// print_r($this->data);
 ?>
 </pre>
 
@@ -104,27 +133,61 @@ print_r($this->data);
              type:"POST", 
              url:"\/anamnesieventi/modifica/" + idevento}
         );
-
-
         $('#VGM').modal('show');
+    }
+    
+    function aggiungiIndagineStrumentale (tabella) 
+    {
+       alert(tabella);
+    }
+    
+    function aggiungiIndagineDiLaboratorio (tabella) 
+    {
+        $('#VGM_title').html("Aggiungi indagini di laboratorio");
+        
+        $.ajax(
+            {
+             async:false, 
+             dataType:"html", 
+             success:function (data, textStatus) {$("#VGM_body").html(data);}, 
+             type:"POST", 
+             url:"\/laboratorio/modifica/" + tabella
+            }
+        );
+        
+        
+        $('#VGM').modal('show');        
+        
+        // alert(tabella);
+    }
+    
+    function aggiungiIndagineRadiologia (tabella) 
+    {
+        alert(tabella);
     }
     
      
     function VGM_invia_button_click ()
     {
         formid = $("#VGM_body form").attr('id');
+        shortname = formid.substr(0, (formid.length - 12));
+        ajaxurl = "\/laboratorio/salva/" + shortname;
+       
+        if (formid === "AnamnesieventoForm")        ajaxurl = "\/anamnesieventi/crea";
         
-        if (formid == "AnamnesieventoForm") {
-            $.ajax(
-             {    async:false, 
-                  data:$("#AnamnesieventoForm").serialize(), 
-                  dataType:"html", 
-                  success:function (data, textStatus) {$("#VGM_output").html(data)}, 
-                  type:"POST", 
-                  url:"\/anamnesieventi/crea"
-              }
-            );
-        }
+        
+        $.ajax(
+            {    async:false, 
+                 data:$("#" + formid).serialize(), 
+                 dataType:"html", 
+                 success:function (data, textStatus) {$("#VGM_output").html(data);}, 
+                 type:"POST", 
+                 url: ajaxurl
+             }
+        );
+
+       // window.location = "/visite/apri/<?php echo $this->Session->read('Visita.id'); ?>)";
+
     }
     
     function elimina_visita(id_visita)
@@ -134,4 +197,22 @@ print_r($this->data);
         }
     }
     
+    function modificaEsameDiLaboratorio(tabella, id) 
+    {
+        $('#VGM_title').html("Modifica indagini di laboratorio");
+        
+        $.ajax(
+            {
+             async:false, 
+             dataType:"html", 
+             success:function (data, textStatus) {$("#VGM_body").html(data);}, 
+             type:"POST", 
+             url:"\/laboratorio/modifica/" + tabella + "/" + id
+            }
+        );
+        $('#VGM').modal('show');      
+    }
+    
+    
+
 </script>

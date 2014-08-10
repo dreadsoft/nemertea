@@ -115,7 +115,15 @@ $plurali = array(	'paziente'      		=> 'pazienti',
                         'anamnesi'                      => 'anamnesi',
                         'anamnesievento' 		=> 'anamnesieventi',
                         'cod_diagnosi_principale' 	=> 'cod_diagnosi_principale',
-                        'indagine'                      => 'indagini'
+                        'indagine'                      => 'indagini',
+                        'laboratorio'                   => 'laboratorio',
+                        'lab_emocromo'                  => 'lab_emocromo',
+                        'lab_ormoni'                    => 'lab_ormoni',
+                        'lab_biochimica'                => 'lab_biochimica',
+                        'lab_microbiologia'             => 'lab_microbiologia',
+                        'lab_enzimi'                    => 'lab_enzimi',
+                        'lab_urine'                     => 'lab_urine',
+                        'lab_shadow'                    => 'lab_shadow'
                 );
 
 Inflector::rules("plural", array("irregular" => $plurali ));

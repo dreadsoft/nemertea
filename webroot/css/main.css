@@ -27,4 +27,20 @@ h2 {
     color: #AAAAAA;
 }
 
+table.analisi {
+    font-size: 9pt; 
+    font-family: Courier;
+    letter-spacing: -0.05em;
+}
+
+table.analisi th {
+    background: #428bca !important;
+    color: #FEFEFE;
+    text-align: center;
+}
+
+table.analisi td {
+    
+}
+
 

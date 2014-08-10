@@ -39,6 +39,17 @@ class VisiteController extends AppController {
         
         function elenco ($paziente_id) 
         {
+            $this->loadModel('Tipovisita');
+            $tipi = $this->Tipovisita->find(
+                        'list', 
+                        array('fields' => array(
+                            "Tipovisita.id", 
+                            "Tipovisita.descrizione"
+                            )
+                        )   
+                    );
+            
+            $this->set('tipovisita', $tipi);
             
             
             $visite = $this->Visita->find('all', array(
@@ -73,7 +84,9 @@ class VisiteController extends AppController {
            $this->Session->write('Paziente.nome', 
                    $this->data['Paziente']['cognome'] . " " . 
                    $this->data['Paziente']['nome'] 
-            );
+           );
+           
+           $this->Session->write('Visita.id', $this->data['Visita']['id']);
            
             $this->loadModel('Indagine');
             
@@ -88,7 +101,7 @@ class VisiteController extends AppController {
             
             $pulsante_laboratorio = "";
             foreach ($indagini_laboratorio as $tab => $indagine) {
-                $pulsante_laboratorio .= "<li><a href=\"aggiungiIndagineDiLaboratorio($tab)\">$indagine</a></li>";
+                $pulsante_laboratorio .= "<li><a href=\"#\" onclick=\"aggiungiIndagineDiLaboratorio('$tab')\">$indagine</a></li>";
             }
             
             $this->set ('pulsante_laboratorio', $pulsante_laboratorio);
@@ -104,10 +117,32 @@ class VisiteController extends AppController {
             
             $pulsante_strumentali = "";
             foreach ($indagini_strumentali as $tab => $indagine) {
-                $pulsante_strumentali .= "<li><a href=\"aggiungiIndagineStrumentale($tab)\">$indagine</a></li>";
+                $pulsante_strumentali .= "<li><a href=\"#\" onclick=\"aggiungiIndagineStrumentale('$tab')\">$indagine</a></li>";
             }
+            $this->set('pulsante_strumentali', $pulsante_strumentali);
             
-            $this->set ('pulsante_strumentali', $pulsante_strumentali);
+            // -----------------------------------------------------------------
+            // Pulsante indagini radiologia
+            // -----------------------------------------------------------------
+            $indagini_radiologia = $this->Indagine->find('list', array(
+                'fields' => array('Indagine.tabella', 'Indagine.nome'),
+                'conditions' => array('Indagine.attiva' => '1', 'Indagine.tipo' => 'radiologia'),
+            ));
+            asort($indagini_radiologia);
+            
+            $pulsante_radiologia = "";
+            foreach ($indagini_radiologia as $tab => $indagine) {
+                $pulsante_radiologia .= "<li><a href=\"#\" onclick=\"aggiungiIndagineRadiologia('$tab')\">$indagine</a></li>";
+            }
+            $this->set('pulsante_radiologia', $pulsante_radiologia);
+            
+            
+            
+            
+            $this->set('indagini_laboratorio', $indagini_laboratorio);
+            $this->set('indagini_strumentali', $indagini_strumentali);
+            $this->set('indagini_radiologia', $indagini_radiologia);
+            
             
         }
         

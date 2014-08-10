@@ -47,6 +47,11 @@ $cakeDescription = 'Nemertea - Cartella clinica';
 	echo $this->Html->css("font-awesome/css/font-awesome.css");
 	echo $this->Html->css("sb-admin.css");
         echo $this->Html->css("main.css");
+        
+        echo $this->Html->script("jquery-1.10.2.js");
+        echo $this->Html->script("bootstrap.min.js");
+        echo $this->Html->script("plugins/metisMenu/jquery.metisMenu.js");
+        echo $this->Html->script("sb-admin.js");
 	?>
 </head>
 <body>
@@ -75,13 +80,13 @@ $cakeDescription = 'Nemertea - Cartella clinica';
                         <li>
                                 <strong>Codice fiscale</strong><br>
                                 <a id="quickinfo_cf" href="#" onclick="copia_clipboard('quickinfo_cf');">
-                                    RSSMRC81H10A515W
+                                    RSS
                                 </a>
 
                         <li class="divider"></li>
                         <li>
                                 <strong>Telefono</strong>
-                                <a id="quickinfo_tel" href="#"  onclick="copia_clipboard('quickinfo_tel');">3381010621</a>
+                                <a id="quickinfo_tel" href="#"  onclick="copia_clipboard('quickinfo_tel');">1111544521</a>
                         </li>
                         <li class="divider"></li>
                         <li>
@@ -205,12 +210,7 @@ $cakeDescription = 'Nemertea - Cartella clinica';
 	<?php // echo $this->element('sql_dump'); 
 	
 	// CORE SCRIPT
-    echo $this->Html->script("jquery-1.10.2.js");
-	
-    echo $this->Html->script("bootstrap.min.js");
-    echo $this->Html->script("plugins/metisMenu/jquery.metisMenu.js");
 
-    echo $this->Html->script("sb-admin.js");
 	?>
     
     
