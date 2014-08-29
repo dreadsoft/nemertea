@@ -66,11 +66,7 @@ class AnamnesiController extends AppController {
 			/**
 			 * Memorizzazzione nome del paziente in sessione
 			 */
-			$nomepaz = $anamnesi['Paziente']['cognome'] . 
-					   " " . $anamnesi['Paziente']['nome'];
-
-			$this->Session->write('Paziente.nome', $nomepaz);
-                        
+			$this->Session->write("Paziente", $anamnesi['Paziente']);                        
                         $this->eventi($paziente_id);
 		}
                                

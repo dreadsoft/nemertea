@@ -31,9 +31,7 @@ class PazientiController extends AppController {
             $pazienti = $this->Paziente->find('all', array('conditions' => array('OR' => $conditions)));
             $this->set('pazienti', $pazienti);
             $this->Session->delete('Paziente');
-            
-            
-        }
+		}
         
         public function riepilogo ($paziente_id = null)
         {
@@ -63,7 +61,7 @@ class PazientiController extends AppController {
              */
             $this->Session->write("Paziente.id", $paziente_id);
             $this->Session->write("Paziente.nome", $paz['Paziente']['cognome'] . " " . $paz['Paziente']['nome']);
-
+			$this->Session->write("Paziente", $paz['Paziente']);
             
             /*
              * Imposto le variabili per il rendering

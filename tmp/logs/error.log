@@ -18376,3 +18376,793 @@ Stack Trace:
 #9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
 #10 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2014-08-12 20:34:40 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Farmaci.id' in 'field list'
+Request URL: /farmaci/
+Stack Trace:
+#0 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Farmaci...', Array)
+#2 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(665): DboSource->execute('SELECT `Farmaci...', Array, Array)
+#3 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1077): DboSource->fetchAll('SELECT `Farmaci...', false)
+#4 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(2902): DboSource->read(Object(Farmaci), Array)
+#5 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Model\Model.php(2874): Model->_readDataSource('list', Array)
+#6 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Model\Farmaci.php(15): Model->find('list', Array)
+#7 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\Controller\FarmaciController.php(5): Farmaci->trova('augmentin')
+#8 [internal function]: FarmaciController->index()
+#9 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FarmaciController), Array)
+#10 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Users\dreadsoft\Desktop\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(FarmaciController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\dreadsoft\Desktop\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-08-26 10:45:33 Error: [MissingControllerException] Controller class PhpmyadaminController could not be found.
+Exception Attributes: array (
+  'class' => 'PhpmyadaminController',
+  'plugin' => NULL,
+)
+Request URL: /phpmyadamin
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 11:11:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 11:20:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 11:22:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 11:23:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 11:25:46 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 11:27:46 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 11:34:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 11:37:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 17:27:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 17:27:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 17:28:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 17:29:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 17:29:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 17:51:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 17:51:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 18:07:25 Error: Fatal Error (1): Call to a member function findById() on a non-object in [F:\nemertea\htdocs\app\Controller\FarmaciController.php, line 21]
+2014-08-26 18:07:25 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /farmaci/aggiungiavisita/6000
+Stack Trace:
+#0 F:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'F:\nemertea\htd...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'F:\nemertea\htd...', 21, Array)
+#2 F:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'F:\nemertea\htd...', 21, Array)
+#3 F:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-26 18:23:00 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'farmaco_id' cannot be null
+Request URL: /farmaci/aggiungiavisita/6000
+Stack Trace:
+#0 F:\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 F:\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ne...', Array)
+#2 F:\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `ne...')
+#3 F:\nemertea\htdocs\lib\Cake\Model\Model.php(1832): DboSource->create(Object(AppModel), Array, Array)
+#4 F:\nemertea\htdocs\app\Controller\FarmaciController.php(33): Model->save(Array)
+#5 [internal function]: FarmaciController->aggiungiavisita('6000')
+#6 F:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FarmaciController), Array)
+#7 F:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 F:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(FarmaciController), Object(CakeRequest), Object(CakeResponse))
+#9 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-26 18:24:13 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'farmaco_id' cannot be null
+Request URL: /farmaci/aggiungiavisita/6000
+Stack Trace:
+#0 F:\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 F:\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ne...', Array)
+#2 F:\nemertea\htdocs\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `ne...')
+#3 F:\nemertea\htdocs\lib\Cake\Model\Model.php(1832): DboSource->create(Object(AppModel), Array, Array)
+#4 F:\nemertea\htdocs\app\Controller\FarmaciController.php(33): Model->save(Array)
+#5 [internal function]: FarmaciController->aggiungiavisita('6000')
+#6 F:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FarmaciController), Array)
+#7 F:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 F:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(FarmaciController), Object(CakeRequest), Object(CakeResponse))
+#9 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-26 18:39:21 Error: [MissingControllerException] Controller class ElencoFarmaciVisitaController could not be found.
+Exception Attributes: array (
+  'class' => 'ElencoFarmaciVisitaController',
+  'plugin' => NULL,
+)
+Request URL: /elencoFarmaciVisita
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 18:39:36 Error: [MissingViewException] View file "F:\nemertea\htdocs\app\View\Terapie\elenco_farmaci_visita.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'F:\\nemertea\\htdocs\\app\\View\\Terapie\\elenco_farmaci_visita.ctp',
+)
+Request URL: /terapie/elencoFarmaciVisita
+Stack Trace:
+#0 F:\nemertea\htdocs\lib\Cake\View\View.php(463): View->_getViewFileName(NULL)
+#1 F:\nemertea\htdocs\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 F:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 F:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(TerapieController), Object(CakeRequest), Object(CakeResponse))
+#4 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-26 18:42:46 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [F:\nemertea\htdocs\app\View\Terapie\elenco_farmaci_visita.ctp, line 4]
+2014-08-26 18:42:46 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /terapie/elencoFarmaciVisita
+Stack Trace:
+#0 F:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'F:\nemertea\htd...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'F:\nemertea\htd...', 4, Array)
+#2 F:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'F:\nemertea\htd...', 4, Array)
+#3 F:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-26 18:43:09 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [F:\nemertea\htdocs\app\View\Terapie\elenco_farmaci_visita.ctp, line 4]
+2014-08-26 18:43:09 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /terapie/elencoFarmaciVisita
+Stack Trace:
+#0 F:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'F:\nemertea\htd...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'F:\nemertea\htd...', 4, Array)
+#2 F:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'F:\nemertea\htd...', 4, Array)
+#3 F:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-26 19:31:27 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting ',' or ';' in [F:\nemertea\htdocs\app\View\Terapie\elenco_farmaci_visita.ctp, line 4]
+2014-08-26 19:31:27 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting ',' or ';'
+Request URL: /terapie/elencoFarmaciVisita
+Stack Trace:
+#0 F:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'F:\nemertea\htd...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'F:\nemertea\htd...', 4, Array)
+#2 F:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'F:\nemertea\htd...', 4, Array)
+#3 F:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-26 20:00:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 20:01:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 20:05:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-27 14:36:34 Error: Fatal Error (1): Call to undefined method View::Html() in [F:\nemertea\htdocs\app\View\Terapie\elenco_farmaci_visita.ctp, line 9]
+2014-08-27 14:36:34 Error: [FatalErrorException] Call to undefined method View::Html()
+Request URL: /terapie/elencoFarmaciVisita
+Stack Trace:
+#0 F:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'F:\nemertea\htd...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'F:\nemertea\htd...', 9, Array)
+#2 F:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'F:\nemertea\htd...', 9, Array)
+#3 F:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-27 18:56:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 F:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 19:32:02 Error: Fatal Error (4): syntax error, unexpected ';' in [H:\nemertea\htdocs\app\View\Terapie\modifica.ctp, line 4]
+2014-08-28 19:32:02 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /terapie/modifica/4
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'H:\nemertea\htd...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'H:\nemertea\htd...', 4, Array)
+#2 H:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'H:\nemertea\htd...', 4, Array)
+#3 H:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-28 19:40:31 Error: Fatal Error (4): syntax error, unexpected 'array' (T_ARRAY) in [H:\nemertea\htdocs\app\View\Terapie\modifica.ctp, line 5]
+2014-08-28 19:40:31 Error: [FatalErrorException] syntax error, unexpected 'array' (T_ARRAY)
+Request URL: /terapie/modifica/4
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'H:\nemertea\htd...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'H:\nemertea\htd...', 5, Array)
+#2 H:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'H:\nemertea\htd...', 5, Array)
+#3 H:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-28 19:46:03 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:48:24 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [H:\nemertea\htdocs\app\View\Terapie\modifica.ctp, line 10]
+2014-08-28 19:48:24 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /terapie/modifica/6
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'H:\nemertea\htd...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'H:\nemertea\htd...', 10, Array)
+#2 H:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'H:\nemertea\htd...', 10, Array)
+#3 H:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-28 19:48:29 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [H:\nemertea\htdocs\app\View\Terapie\modifica.ctp, line 10]
+2014-08-28 19:48:29 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /terapie/modifica/4
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'H:\nemertea\htd...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'H:\nemertea\htd...', 10, Array)
+#2 H:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'H:\nemertea\htd...', 10, Array)
+#3 H:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-28 19:48:52 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:48:55 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:53:47 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:53:48 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:53:49 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:53:49 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:53:50 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:53:50 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:53:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 19:54:01 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:56:29 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:57:10 Error: [MissingTableException] Table teras for model Tera was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'teras',
+  'class' => 'Tera',
+  'ds' => 'default',
+)
+Request URL: /laboratorio/salva/Tera
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Model\Model.php(3498): Model->setSource('teras')
+#1 H:\nemertea\htdocs\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 H:\nemertea\htdocs\app\Controller\LaboratorioController.php(70): Model->save(Array)
+#3 [internal function]: LaboratorioController->salva('Tera')
+#4 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LaboratorioController), Array)
+#5 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(LaboratorioController), Object(CakeRequest), Object(CakeResponse))
+#7 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-08-28 19:58:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 20:01:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 20:07:13 Error: [MissingViewException] View file "H:\nemertea\htdocs\app\View\Terapie\salva.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'H:\\nemertea\\htdocs\\app\\View\\Terapie\\salva.ctp',
+)
+Request URL: /terapie/salva/6
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\View\View.php(463): View->_getViewFileName(NULL)
+#1 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(TerapieController), Object(CakeRequest), Object(CakeResponse))
+#4 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-28 20:07:17 Error: [MissingViewException] View file "H:\nemertea\htdocs\app\View\Terapie\salva.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'H:\\nemertea\\htdocs\\app\\View\\Terapie\\salva.ctp',
+)
+Request URL: /terapie/salva/6
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\View\View.php(463): View->_getViewFileName(NULL)
+#1 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(TerapieController), Object(CakeRequest), Object(CakeResponse))
+#4 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-28 20:09:09 Error: [MissingViewException] View file "H:\nemertea\htdocs\app\View\Terapie\salva.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'H:\\nemertea\\htdocs\\app\\View\\Terapie\\salva.ctp',
+)
+Request URL: /terapie/salva/12
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\View\View.php(463): View->_getViewFileName(NULL)
+#1 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(TerapieController), Object(CakeRequest), Object(CakeResponse))
+#4 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-28 20:10:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 20:10:51 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 20:11:08 Error: [MissingViewException] View file "H:\nemertea\htdocs\app\View\Terapie\salva.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'H:\\nemertea\\htdocs\\app\\View\\Terapie\\salva.ctp',
+)
+Request URL: /terapie/salva/12
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\View\View.php(463): View->_getViewFileName(NULL)
+#1 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(TerapieController), Object(CakeRequest), Object(CakeResponse))
+#4 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-28 20:56:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 21:19:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 21:22:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 21:23:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 21:26:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 21:51:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 22:03:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 22:04:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 22:07:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 22:07:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 22:09:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 22:10:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 22:11:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.min.map
+Stack Trace:
+#0 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-28 22:36:05 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [H:\nemertea\htdocs\app\View\Layouts\default.ctp, line 75]
+2014-08-28 22:36:05 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /pazienti/riepilogo/2
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'H:\nemertea\htd...', 75)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'H:\nemertea\htd...', 75, Array)
+#2 H:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'H:\nemertea\htd...', 75, Array)
+#3 H:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-28 22:36:39 Error: Fatal Error (1): Call to undefined method View::loadModel() in [H:\nemertea\htdocs\app\View\Layouts\default.ctp, line 75]
+2014-08-28 22:36:39 Error: [FatalErrorException] Call to undefined method View::loadModel()
+Request URL: /pazienti/riepilogo/2
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'H:\nemertea\htd...', 75)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'H:\nemertea\htd...', 75, Array)
+#2 H:\nemertea\htdocs\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'H:\nemertea\htd...', 75, Array)
+#3 H:\nemertea\htdocs\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-28 22:37:35 Error: [MissingHelperException] Helper class usesHelper could not be found.
+Exception Attributes: array (
+  'class' => 'usesHelper',
+  'plugin' => false,
+)
+Request URL: /pazienti/riepilogo/2
+Stack Trace:
+#0 H:\nemertea\htdocs\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('uses')
+#1 H:\nemertea\htdocs\lib\Cake\View\View.php(824): HelperCollection->__isset('uses')
+#2 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(729): View->__get('uses')
+#3 H:\nemertea\htdocs\app\View\Layouts\default.ctp(76): Controller->loadModel('Paziente')
+#4 H:\nemertea\htdocs\lib\Cake\View\View.php(935): include('H:\nemertea\htd...')
+#5 H:\nemertea\htdocs\lib\Cake\View\View.php(897): View->_evaluate('H:\nemertea\htd...', Array)
+#6 H:\nemertea\htdocs\lib\Cake\View\View.php(529): View->_render('H:\nemertea\htd...')
+#7 H:\nemertea\htdocs\lib\Cake\View\View.php(474): View->renderLayout('', 'default')
+#8 H:\nemertea\htdocs\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#9 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#10 H:\nemertea\htdocs\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PazientiController), Object(CakeRequest), Object(CakeResponse))
+#11 H:\nemertea\htdocs\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

@@ -9,9 +9,27 @@ class Laboratorio extends AppModel {
         foreach ($tabelle as $tab) {
             $this->setSource($tab);
             
+            $lab_shadow = ClassRegistry::init("lab_shadow");
+            $label = $lab_shadow->find('list', array(
+                'fields' => array(
+                    "esame", "label"
+                ),
+                'conditions' => array(
+                    "tabella" => $tab,
+                ),
+                'recursive' => 0
+            ));            
+            
+            $etichette[$tab] = $label;
+            
+            /*
+             * Condizioni di ricerca nelle tabelle esami di laboratorio
+             */
             $conditions = array(
                 "paziente_id" => $opzioni['paziente_id']
             );
+            
+            if ($opzioni['visita_id']!== null) $conditions['visita_id'] = $opzioni['visita_id'];
             
             $dati = $this->find('all', array('conditions' => $conditions));
             
@@ -32,9 +50,13 @@ class Laboratorio extends AppModel {
         }
          
         ksort($date);
-        
+
+        //echo "<pre>";
+        //print_r($etichette);
+        //echo "</pre>";
+            
                      
-        $output = array();
+        $parziale = array();
         
         foreach ($destinazione as $tabid => $tab) 
         {
@@ -49,18 +71,24 @@ class Laboratorio extends AppModel {
 
                 foreach ($gruppo as $esame => $valore)
                 {
-                    $output[$tabid][$esame][$d] = $valore;
+                    $parziale[$tabid][$esame][$d] = $valore;
                 }
             }
             
-            foreach ($output as $tabid => $tabella) {
+            foreach ($parziale as $tabid => $tabella) {
                 foreach ($tabella as $esameid => $esame) 
                 {
                     $merge = array_merge($date, $esame);
-                    $output[$tabid][$esameid] = $merge;
+                    $esamelabel = $esameid;
+                    if (isset($etichette[$tabid][$esameid])) $esamelabel = $etichette[$tabid][$esameid];
+                    $output[$tabid][$esamelabel] = $merge;
+
                 }
             }
         }
+        
+        // Qualora non ci siano analisi, imposta output a NULL
+        if (!isset($output)) $output = null;
         
         return (array('output' => $output, 'date' => $date));
     }

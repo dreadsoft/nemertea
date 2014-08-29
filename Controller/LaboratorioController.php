@@ -115,17 +115,11 @@ class LaboratorioController extends AppController {
          * @param array $colonne
          * @param array $opzioni
          */
-        function vista_colonne () 
+        function vista_colonne ($visita_id = null) 
         {
-            /*
-             * ------------------------------------------
-             * Intervallo da caricare
-             * ------------------------------------------
-             */
-            App::uses('CakeTime', 'Utility');
-            $anno_scorso = CakeTime::fromString("-1 year");
-            $da = CakeTime::format($anno_scorso, "%Y-%m-%d");
-            $a = CakeTime::format(time(), "%Y-%m-%d");
+            $this->layout = 'ajax';
+            $this->autoLayout = false;
+            
             
             /*
              * ------------------------------------------
@@ -154,10 +148,18 @@ class LaboratorioController extends AppController {
             $paziente_id = $this->Session->read("Paziente.id");
             
             $opzioni = array(
-                'da'            => $da,
-                'a'             => $a,
-                'paziente_id'   => $paziente_id
+                'paziente_id'   => $paziente_id,
+                'visita_id'     => $visita_id
             );
+            
+            // Se id visita non specificato, richiedi analisi dell'ultimo anno
+            if ($visita_id === null) {
+                App::uses('CakeTime', 'Utility');
+                $anno_scorso = CakeTime::fromString("-1 year");
+                $opzioni['da'] = CakeTime::format($anno_scorso, "%Y-%m-%d");
+                $opzioni['a'] = CakeTime::format(time(), "%Y-%m-%d");
+            }
+            
             $dati = $this->Laboratorio->incolonna($tabelle, $opzioni);
             
             /*
@@ -173,16 +175,6 @@ class LaboratorioController extends AppController {
              * --------------------------------------------------
              */
             $this->set('dati', $dati);
-
         }
-        
-        
-
-        
-        
-        
-        
-	
-
 }
 ?>

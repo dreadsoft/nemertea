@@ -1,9 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
 h2 {
     border-bottom: dashed 1px #428bca;
     margin-bottom: 2ex;
     padding-bottom: 0.5ex;
     color: #428bca;
+}
 
+h3.sezione {
+	color: #428bca;
 }
 
 
@@ -28,19 +33,22 @@ h2 {
 }
 
 table.analisi {
-    font-size: 9pt; 
-    font-family: Courier;
-    letter-spacing: -0.05em;
+    font-size: 12pt; 
+    font-family: 'Inconsolata';
+    /* letter-spacing: -0.05em;*/
 }
 
 table.analisi th {
-    background: #428bca !important;
-    color: #FEFEFE;
+    
+    /* background: #d9edf7 !important; */
+	border-bottom: solid 3px silver !important;
     text-align: center;
 }
 
 table.analisi td {
-    
+    padding: 1px !important;
+	/* border-bottom: dotted 1px silver !important;
+	border-top: dotted 1px silver !important;*/
 }
 
 

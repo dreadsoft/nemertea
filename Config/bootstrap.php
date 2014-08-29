@@ -123,7 +123,9 @@ $plurali = array(	'paziente'      		=> 'pazienti',
                         'lab_microbiologia'             => 'lab_microbiologia',
                         'lab_enzimi'                    => 'lab_enzimi',
                         'lab_urine'                     => 'lab_urine',
-                        'lab_shadow'                    => 'lab_shadow'
+                        'lab_shadow'                    => 'lab_shadow',
+                        'farmaci'                       => 'farmaci',
+                        'terapie'                       => 'terapie'
                 );
 
 Inflector::rules("plural", array("irregular" => $plurali ));

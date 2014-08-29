@@ -9,6 +9,25 @@ echo "</h2>";
 
 ?>
 
+
+<!-- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AREA DIARIO CLINICO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<?php
+
+    $diario  = $this->Form->create('Visita', array('type' => 'post', 'action' => 'modifica', 'id' => 'diario_clinico'));
+    $diario .= $this->Form->input("id");
+    $diario .= $this->Form->input("diario_clinico", array("label" => ""));
+    
+    $diario .= "<div class=\"text-right col-md-offset-8\">";
+    $diario .= $this->Form->input("effettuata_da", array("label" => ""));
+    $diario .= '<button class="btn btn-small btn-primary" type="submit"><i class="fa fa-floppy-o"></i> Salva diario</button>' . "</div>";
+    echo $this->BS->panel("Diario clinico", $diario, "default");
+?>
+
 <div class="well text-center">
     
 <div class="btn-group">
@@ -56,40 +75,69 @@ echo "</h2>";
 
 <!-- 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-AREA DIARIO CLINICO
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--->
-
-<?php
-
-    $diario  = $this->Form->create('Visita', array('type' => 'post', 'action' => 'modifica'));
-    $diario .= $this->Form->input("id");
-    $diario .= $this->Form->input("diario_clinico", array("label" => ""));
-    
-    $diario .= "<div class=\"text-right col-md-offset-8\">";
-    $diario .= $this->Form->input("effettuata_da", array("label" => ""));
-    $diario .= '<button class="btn btn-small btn-primary" type="submit"><i class="fa fa-floppy-o"></i> Salva diario</button>' . "</div>";
-    echo $this->BS->panel("Diario clinico", $diario, "primary");
-?>
-
-<!-- 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 AREA ESAMI DI LABORATORIO 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
-<div id="areaEsamiDiLaboratorio"> </div>
+<div id="areaEsamiDiLaboratorio">
+    <h3 class="sezione">Esami di laboratorio</h3>
+</div>
 
+
+<script>
+    $.get( "/laboratorio/vista_blocco/emogasanalisi", function(data) { $(data).appendTo('#areaEsamiDiLaboratorio');});
+    $.get( "/laboratorio/vista_colonne/<?php echo $this->data['Visita']['id'] ?>", function(data) { $(data).appendTo('#areaEsamiDiLaboratorio');});
+</script>
 <?php
+
+
+
 foreach ($indagini_laboratorio as $indagine) {
     
     // echo  $this->BS->panel(ucfirst($indagine), "", 'success', strtolower($indagine));
-    $indagine = strtolower($indagine);
-    if ($indagine !== "emogasanalisi") $indagine = "lab_" . $indagine;
-    echo "\n<script>$.get( \"/laboratorio/vista_blocco/{$indagine}\", function(data) { $(data).appendTo('#areaEsamiDiLaboratorio')})</script>";
+    // $indagine = strtolower($indagine);
+    // if ($indagine !== "emogasanalisi") $indagine = "lab_" . $indagine;
+    // echo "\n<script>$.get( \"/laboratorio/vista_blocco/{$indagine}\", function(data) { $(data).appendTo('#areaEsamiDiLaboratorio')})</script>";
 
 }
 ?>
 
+
+<!-- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AREA ESAMI STRUMENTALI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<div id="areaEsamiStrumentali"> 
+    <h3 class="sezione">Esami strumentali</h3>
+</div>
+
+
+<!-- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AREA TERAPIA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<div id="areaTerapia"> 
+    <h3 class="sezione">Terapia</h3>
+    <div class="form-group form-inline">
+        <input type="text" class="form-control" id="stringaTerapia" placeholder="Aggiungi terapia">
+        <button class="btn btn-default" onclick="cerca_terapia(); return false;"><i class="fa fa-fw fa-plus"></i></button>
+    </div> 
+    
+    <div id="elencoFarmaciVisita">
+        
+    </div>
+    
+    <script>
+        $.get( "/terapie/elencoFarmaciVisita", function(data) { $(data).appendTo('#elencoFarmaciVisita');});
+    </script>
+</div>
+
+<!-- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MODAL MULTIUSO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
 
 <div class="modal fade" id="VGM">
   <div class="modal-dialog">
@@ -111,14 +159,6 @@ foreach ($indagini_laboratorio as $indagine) {
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-
-<pre>
-<?php
-
-// print_r($this->data);
-?>
-</pre>
 
 
 <script>
@@ -174,7 +214,9 @@ foreach ($indagini_laboratorio as $indagine) {
         ajaxurl = "\/laboratorio/salva/" + shortname;
        
         if (formid === "AnamnesieventoForm")        ajaxurl = "\/anamnesieventi/crea";
-        
+        if (formid === "TerapieSalvaForm")			ajaxurl = "/terapie/salva/" + $("#TerapieId").val();
+		
+		
         
         $.ajax(
             {    async:false, 
@@ -185,9 +227,12 @@ foreach ($indagini_laboratorio as $indagine) {
                  url: ajaxurl
              }
         );
-
-       // window.location = "/visite/apri/<?php echo $this->Session->read('Visita.id'); ?>)";
-
+		
+		// inserire qui le opzioni di caricamento/redirezionamento pagina
+		if (formid === "TerapieSalvaForm") window.location = "/visite/apri/<?php echo $this->Session->read('Visita.id'); ?>#areaTerapia";
+		
+		// altrimenti ricarica la pagina
+		window.reload();
     }
     
     function elimina_visita(id_visita)
@@ -212,7 +257,48 @@ foreach ($indagini_laboratorio as $indagine) {
         );
         $('#VGM').modal('show');      
     }
+   
+    function cerca_terapia ()
+    {
+        $('#VGM_title').html("Cerca terapia");
+        ricerca = $('#stringaTerapia').val();
+        if (ricerca === "") {
+            alert("Inserire il farmaco da cercare");
+            return (false);
+        }    
+            
+            
+        $.ajax(
+            {
+             async:false, 
+             dataType:"html", 
+             success:function (data, textStatus) {$("#VGM_body").html(data);}, 
+             type:"POST", 
+             url:"/farmaci/cerca/" + ricerca
+            }
+        );
+		$('#VGM_invia_button').hide();
+        $('#VGM').modal('show');      
+    }
     
+    function modificaTerapia (idterapia) {
+        $('#VGM_title').html("Modifica terapia");
+        
+        $.ajax(
+        {    async:false, 
+             dataType:"html", 
+             success:function (data, textStatus) {$("#VGM_body").html(data);}, 
+             type:"POST", 
+             url:"\/terapie/modifica/" + idterapia}
+        );
+        $('#VGM').modal('show');
+    }
+    
+    function eliminaTerapia (idterapia) {
+		if (confirm("Eliminare la prescrizione ?")) {
+			window.location = "/terapie/elimina/" + idterapia;
+		}
+    }
     
 
 </script>

@@ -52,6 +52,11 @@ $cakeDescription = 'Nemertea - Cartella clinica';
         echo $this->Html->script("bootstrap.min.js");
         echo $this->Html->script("plugins/metisMenu/jquery.metisMenu.js");
         echo $this->Html->script("sb-admin.js");
+		
+		// CARICO I DATI DEL PAZIENTE DALLA SESSIONE
+		$pz = $this->Session->read("Paziente");
+				
+		
 	?>
 </head>
 <body>
@@ -62,15 +67,15 @@ $cakeDescription = 'Nemertea - Cartella clinica';
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Toggle navigation</span>	
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" id="paziente_nome" href="#"><?php echo $this->Session->read("Paziente.nome");?></a>
+                <a class="navbar-brand" id="paziente_nome" href="#"><?php echo $pz['cognome'] . " " . $pz['nome'] ?></a>
             </div>
             <!-- /.navbar-header -->
-
+			
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a title="Informazioni" class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -80,13 +85,15 @@ $cakeDescription = 'Nemertea - Cartella clinica';
                         <li>
                                 <strong>Codice fiscale</strong><br>
                                 <a id="quickinfo_cf" href="#" onclick="copia_clipboard('quickinfo_cf');">
-                                    RSS
+                                    <?php echo $pz['codice_fiscale'] ?>
                                 </a>
 
                         <li class="divider"></li>
                         <li>
                                 <strong>Telefono</strong>
-                                <a id="quickinfo_tel" href="#"  onclick="copia_clipboard('quickinfo_tel');">1111544521</a>
+                                <a id="quickinfo_tel" href="#"  onclick="copia_clipboard('quickinfo_tel');">
+									<?php echo $pz['telefono'] ?>
+								</a>
                         </li>
                         <li class="divider"></li>
                         <li>
@@ -170,11 +177,7 @@ $cakeDescription = 'Nemertea - Cartella clinica';
                             </span>
                            <!-- /input-group -->
                     </li>
-					<li><a href="/pazienti/riepilogo/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-home fa-fw"></i> Riepilogo</a></li>
-					<li><a href="/anamnesi/paziente/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-th-list fa-fw"></i> Anamnesi</a></li>
-                                        <li><a href="/visite/elenco/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-medkit fa-fw"></i> Visite</a></li>
-					<li>
-                        <a href="#"><i class="fa fa-plus-circle fa-fw"></i> Nuovo<span class="fa arrow"></span></a>
+                    <li><a href="#"><i class="fa fa-plus-circle fa-fw"></i> Nuovo<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="/pazienti/nuovo"><i class="fa fa-user"></i> Paziente</a>
@@ -185,6 +188,18 @@ $cakeDescription = 'Nemertea - Cartella clinica';
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
+
+                    <li><a href="/pazienti/riepilogo/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-home fa-fw"></i> Riepilogo</a></li>
+                    <li><a href="/anamnesi/paziente/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-th-list fa-fw"></i> Anamnesi</a></li>
+                    <li><a href="/visite/elenco/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-medkit fa-fw"></i> Visite</a>
+                    </li>
+                        <ul class="nav nav-second-level collapse in">
+                            <li><a href="#diario_clinico">Diario clinico</a></li>
+                            <li><a href="#areaEsamiDiLaboratorio">Esami di laboratorio</a></li>
+                            <li><a href="#areaEsamiStrumentali">Esami strumentali</a></li>
+                            <li><a href="#areaTerapia">Terapia</a></li>
+                            
+                        </ul>
 
                 </ul>
                 <!-- /#side-menu -->

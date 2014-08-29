@@ -1,3 +1,6 @@
+<?php 
+if ($dati['output'] === null) exit ("Non ci sono esami");
+?>
 <table class="table-bordered table-condensed table-striped analisi">
 <?php 
 
@@ -6,7 +9,7 @@
  */
 $dateheader = array_keys($dati['date']);
 foreach ($dateheader as $i => $d) {
-    $dateheader[$i] = $this->Time->format('Y', $d) . "<br>" . $this->Time->format('d-m', $d);
+    $dateheader[$i] = $this->Time->format('d-m', $d) . "<br>" . $this->Time->format('Y', $d);
 }
 array_unshift($dateheader, "&nbsp;");
 echo $this->Html->tableHeaders($dateheader);

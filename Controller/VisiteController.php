@@ -79,6 +79,7 @@ class VisiteController extends AppController {
         
         function apri ($id = null)
         {
+            
            $this->data = $this->Visita->findById($id);
            $this->Session->write('Paziente.id', $this->data['Paziente']['id']);
            $this->Session->write('Paziente.nome', 

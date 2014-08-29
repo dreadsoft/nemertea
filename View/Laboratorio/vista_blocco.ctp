@@ -29,7 +29,7 @@ if (is_array($pretable) && count($pretable) > 0) {
     $contenuto .= $this->Html->tableHeaders(array_keys($pretable[0]));
     $contenuto .= $this->Html->tableCells($pretable);
     $contenuto .= "</table>";
-    echo  $this->BS->panel(ucfirst($tabella), $contenuto, 'primary', $tabella);
+    echo  $this->BS->panel(ucfirst($tabella), $contenuto, 'default', $tabella);
 }
 
 
