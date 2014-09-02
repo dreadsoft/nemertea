@@ -15,7 +15,7 @@ if ($tabella == 'emogasanalisi') {
             'hCO3'      => $ega['hco3'],
             'sO2'       => $ega['so2'],
             'FiO2'      => $ega['fio2'],
-            'Dettagli'  => "<a href=\"javascript:modificaEsameDiLaboratorio('$tabella', {$ega['id']})\"><i class=\"fa fa-search\"></i></button>"
+            'Dettagli'  => "<button class='btn btn-primary btn-xs' onclick=\"modificaEsameDiLaboratorio('$tabella', {$ega['id']})\"><i class=\"fa fa-search\"></i></button>"
         );
     }
 }

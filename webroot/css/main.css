@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
 
 h2 {
     border-bottom: dashed 1px #428bca;
@@ -33,8 +33,8 @@ h3.sezione {
 }
 
 table.analisi {
-    font-size: 12pt; 
-    font-family: 'Inconsolata';
+    font-size: 11pt;
+    font-family: 'Droid Sans Mono';
     /* letter-spacing: -0.05em;*/
 }
 
@@ -52,3 +52,15 @@ table.analisi td {
 }
 
 
+#esamiLaboratorioVisita {
+    width: 300px;
+    margin-left: -214px;
+}    
+#esamiLaboratorioVisita li {
+    border-bottom: dotted #EEEEEE 1px;
+    padding: 3px;
+} 
+
+#esamiLaboratorioVisita li a .pull-right i .fa-ellipsis-v{
+color: #AAAAAA;
+}  

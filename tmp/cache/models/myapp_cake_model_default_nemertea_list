@@ -1,2 +1,2 @@
-1409265279
-a:17:{i:0;s:8:"anamnesi";i:1;s:15:"anamnesi_eventi";i:2;s:23:"cod_diagnosi_principale";i:3;s:13:"emogasanalisi";i:4;s:7:"farmaci";i:5;s:8:"indagini";i:6;s:14:"lab_biochimica";i:7;s:12:"lab_emocromo";i:8;s:10:"lab_enzimi";i:9;s:17:"lab_microbiologia";i:10;s:10:"lab_ormoni";i:11;s:10:"lab_shadow";i:12;s:9:"lab_urine";i:13;s:8:"pazienti";i:14;s:7:"terapie";i:15;s:10:"tipovisita";i:16;s:6:"visite";}
+1409659891
+a:19:{i:0;s:8:"anamnesi";i:1;s:15:"anamnesi_eventi";i:2;s:23:"cod_diagnosi_principale";i:3;s:13:"emogasanalisi";i:4;s:7:"farmaci";i:5;s:3:"fvc";i:6;s:8:"indagini";i:7;s:14:"lab_biochimica";i:8;s:12:"lab_emocromo";i:9;s:10:"lab_enzimi";i:10;s:17:"lab_microbiologia";i:11;s:10:"lab_ormoni";i:12;s:13:"lab_parametri";i:13;s:10:"lab_shadow";i:14;s:9:"lab_urine";i:15;s:8:"pazienti";i:16;s:7:"terapie";i:17;s:10:"tipovisita";i:18;s:6:"visite";}

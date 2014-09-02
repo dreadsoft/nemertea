@@ -1,10 +1,17 @@
 <?php
 class Laboratorio extends AppModel {
-	
-    function incolonna (array $tabelle, array $opzioni)
+    /**
+     * Aggrega dati di più tabelle esami
+     * @param array $tabelle elenco tabelle da aggregare
+     * @param array $opzioni opzioni di ricerca
+     * @return array date, esami, etichette
+     */
+    
+    function raccogli_esami (array $tabelle, array $opzioni)
     {
         $destinazione = array();
         $date = array();
+        $etichette = array();
         
         foreach ($tabelle as $tab) {
             $this->setSource($tab);
@@ -29,9 +36,14 @@ class Laboratorio extends AppModel {
                 "paziente_id" => $opzioni['paziente_id']
             );
             
-            if ($opzioni['visita_id']!== null) $conditions['visita_id'] = $opzioni['visita_id'];
+            if (isset($opzioni['visita_id'])) $conditions['visita_id'] = $opzioni['visita_id'];
             
-            $dati = $this->find('all', array('conditions' => $conditions));
+            $options = array();
+            if (isset($opzioni['order'])) $options['order'] = $opzioni['order'];
+            if (isset($opzioni['limit'])) $options['limit'] = $opzioni['limit'];
+            
+            $options['conditions'] = $conditions;
+            $dati = $this->find('all', $options);
             
             foreach ($dati as $num=>$info) {
                 /*
@@ -50,19 +62,34 @@ class Laboratorio extends AppModel {
         }
          
         ksort($date);
-
-        //echo "<pre>";
-        //print_r($etichette);
-        //echo "</pre>";
-            
-                     
+        
+        return (array(
+            'date'          => $date,
+            'destinazione'  => $destinazione,
+            'etichette'     => $etichette
+        ));
+        
+    }
+    
+    function incolonna (array $tabelle, array $opzioni)
+    {
+        
+        $raccolta = $this->raccogli_esami($tabelle, $opzioni);
+        
+        $date = $raccolta['date'];
+        $destinazione = $raccolta['destinazione'];
+        $etichette = $raccolta['etichette'];
+        
         $parziale = array();
+        $lista_esami = array();
         
         foreach ($destinazione as $tabid => $tab) 
         {
             foreach ($tab as $gruppo) 
             {
+                
                 $d = $gruppo['data'];
+                $lista_esami[$tabid][$gruppo['id']] =  $d;
                 unset($gruppo['id']);
                 unset($gruppo['visita_id']);
                 unset($gruppo['paziente_id']);
@@ -90,7 +117,9 @@ class Laboratorio extends AppModel {
         // Qualora non ci siano analisi, imposta output a NULL
         if (!isset($output)) $output = null;
         
-        return (array('output' => $output, 'date' => $date));
+        return (array('output' => $output, 'date' => $date, 'lista_esami' => $lista_esami));
     }
+    
+
 }
 

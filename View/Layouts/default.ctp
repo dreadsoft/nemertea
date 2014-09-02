@@ -44,14 +44,17 @@ $cakeDescription = 'Nemertea - Cartella clinica';
     
     // CORE CSS
     echo $this->Html->css("bootstrap.min.css");
+	echo $this->Html->css("plugins/metisMenu/metisMenu.css");
+	echo $this->Html->css("sb-admin-2.css");
 	echo $this->Html->css("font-awesome/css/font-awesome.css");
-	echo $this->Html->css("sb-admin.css");
-        echo $this->Html->css("main.css");
+	
+	
+    echo $this->Html->css("main.css");
         
-        echo $this->Html->script("jquery-1.10.2.js");
+        echo $this->Html->script("jquery-1.11.0.js");
         echo $this->Html->script("bootstrap.min.js");
-        echo $this->Html->script("plugins/metisMenu/jquery.metisMenu.js");
-        echo $this->Html->script("sb-admin.js");
+        echo $this->Html->script("plugins/metisMenu/metisMenu.min.js");
+        echo $this->Html->script("sb-admin-2.js");
 		
 		// CARICO I DATI DEL PAZIENTE DALLA SESSIONE
 		$pz = $this->Session->read("Paziente");
@@ -83,21 +86,17 @@ $cakeDescription = 'Nemertea - Cartella clinica';
                     </a>
                     <ul class="dropdown-menu dropdown-messages">
                         <li>
-                                <strong>Codice fiscale</strong><br>
-                                <a id="quickinfo_cf" href="#" onclick="copia_clipboard('quickinfo_cf');">
-                                    <?php echo $pz['codice_fiscale'] ?>
-                                </a>
-
+							<strong>Codice fiscale</strong><br>
+							<a><?php echo $pz['codice_fiscale'] ?></a>
+						</li>
                         <li class="divider"></li>
                         <li>
-                                <strong>Telefono</strong>
-                                <a id="quickinfo_tel" href="#"  onclick="copia_clipboard('quickinfo_tel');">
-									<?php echo $pz['telefono'] ?>
-								</a>
+							<strong>Telefono</strong>
+							<a><?php echo $pz['telefono'] ?></a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a class="text-center" href="#">
+                            <a class="text-center" href="/pazienti/riepilogo/<?php echo $pz['id'];; ?>">
                                 <strong>Riepilogo</strong>
                                 <i class="fa fa-arrow-circle-right"></i>
                             </a>
@@ -120,23 +119,8 @@ $cakeDescription = 'Nemertea - Cartella clinica';
                     <a  title="Esami" class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-list-alt  fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
+                    <ul class="dropdown-menu dropdown-alerts" id="toolbar_ultimi_esami">
+                        
                     </ul>
                     <!-- /.dropdown-alerts -->
                 </li>
@@ -161,51 +145,58 @@ $cakeDescription = 'Nemertea - Cartella clinica';
             </ul>
             <!-- /.navbar-top-links -->
 
-        </nav>
-        <!-- /.navbar-static-top -->
+         <!-- /.navbar-static-top -->
 
-        <nav class="navbar-default navbar-static-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="side-menu">
-                    <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
-                            <input id="input-cerca" type="text" class="form-control" placeholder="Cerca...">
-                            <span class="input-group-btn">
-                                <button  class="btn btn-default" type="button" onclick="cerca_paziente();">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                           <!-- /input-group -->
-                    </li>
-                    <li><a href="#"><i class="fa fa-plus-circle fa-fw"></i> Nuovo<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="/pazienti/nuovo"><i class="fa fa-user"></i> Paziente</a>
-                            </li>
-                            <li>
-                                <a href="/visite/nuova/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-medkit"></i> Visita</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
+			<div class="navbar-default sidebar" role="navigation">
+				<div class="sidebar-nav navbar-collapse">
+					<ul class="nav" id="side-menu">
+			
+						<li class="sidebar-search">
+							<div class="input-group custom-search-form">
+								<input id="input-cerca" type="text" class="form-control" placeholder="Cerca...">
+								<span class="input-group-btn">
+									<button  class="btn btn-default" type="button" onclick="cerca_paziente();">
+										<i class="fa fa-search"></i>
+									</button>
+								</span>
+							   <!-- /input-group -->
+						</li>
+						<li><a href="#"><i class="fa fa-plus-circle fa-fw"></i> Nuovo<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li>
+									<a href="/pazienti/nuovo"><i class="fa fa-user"></i> Paziente</a>
+								</li>
+								<li>
+									<a href="/visite/nuova/<?php echo $pz['id'];?>"><i class="fa fa-medkit"></i> Visita</a>
+								</li>
+							</ul>
+							<!-- /.nav-second-level -->
+						</li>
 
-                    <li><a href="/pazienti/riepilogo/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-home fa-fw"></i> Riepilogo</a></li>
-                    <li><a href="/anamnesi/paziente/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-th-list fa-fw"></i> Anamnesi</a></li>
-                    <li><a href="/visite/elenco/<?php echo $this->Session->read("Paziente.id")?>"><i class="fa fa-medkit fa-fw"></i> Visite</a>
-                    </li>
-                        <ul class="nav nav-second-level collapse in">
-                            <li><a href="#diario_clinico">Diario clinico</a></li>
-                            <li><a href="#areaEsamiDiLaboratorio">Esami di laboratorio</a></li>
-                            <li><a href="#areaEsamiStrumentali">Esami strumentali</a></li>
-                            <li><a href="#areaTerapia">Terapia</a></li>
-                            
-                        </ul>
-
-                </ul>
-                <!-- /#side-menu -->
-            </div>
-            <!-- /.sidebar-collapse -->
-        </nav>
+						<li><a href="/pazienti/riepilogo/<?php echo $pz['id'];?>"><i class="fa fa-home fa-fw"></i> Riepilogo</a></li>
+						<li><a href="/anamnesi/paziente/<?php echo $pz['id'];?>"><i class="fa fa-th-list fa-fw"></i> Anamnesi</a></li>
+						<li><a href="/visite/elenco/<?php echo $pz['id'];?>"><i class="fa fa-medkit fa-fw"></i> Visite</a>
+						</li>
+						
+							<ul class="nav nav-second-level collapse in">
+							<?php
+								$ses_visita = $this->Session->read('Visita.id');
+								if ($ses_visita !== null) {
+									echo '
+									<li><a href="#diario_clinico">Diario clinico</a></li>
+									<li><a href="#areaEsamiDiLaboratorio">Esami di laboratorio</a></li>
+									<li><a href="#areaEsamiStrumentali">Esami strumentali</a></li>
+									<li><a href="#areaTerapia">Terapia</a></li>';
+								}
+							?>	
+							</ul>
+							
+					</ul>
+					<!-- /#side-menu -->
+				</div>
+				<!-- /.sidebar-collapse -->
+			</div>
+		</nav>
         <!-- /.navbar-static-side -->
 
         <div id="page-wrapper">
@@ -243,11 +234,11 @@ $cakeDescription = 'Nemertea - Cartella clinica';
         
         function ultime_visite() {
             
-            id_paziente = '<?php echo $this->Session->read("Paziente.id");?>';
+            id_paziente = '<?php echo $pz['id'];?>';
             if (id_paziente == "") return;
             
             $.ajax(
-            {    async:false, 
+            {    async:true, 
                  dataType:"html", 
                  success:function (data, textStatus) {$("#toolbar_ultime_visite").html(data);}, 
                  type:"POST", 
@@ -255,12 +246,28 @@ $cakeDescription = 'Nemertea - Cartella clinica';
             );
 
         }
+        
+        function ultimi_esami() {
+            
+            id_paziente = '<?php echo $pz['id'];?>';
+            if (id_paziente == "") return;
+            
+            $.ajax(
+            {    async:true, 
+                 dataType:"html", 
+                 success:function (data, textStatus) {$("#toolbar_ultimi_esami").html(data);}, 
+                 type:"POST", 
+                 url:"\/laboratorio/ultimi_esami/" + id_paziente}
+            );
+
+        }        
          
        $(document).ready(function() {
            ultime_visite();
+           ultimi_esami();
        });
        
-        
+     
     </script>
     
     

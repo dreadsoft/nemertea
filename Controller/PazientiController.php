@@ -15,7 +15,7 @@ class PazientiController extends AppController {
                 $this->Paziente->create();
                 if ($this->Paziente->save($this->request->data)) {
                     $this->Session->setFlash(__('Scheda paziente creata'));
-                    return $this->redirect(array('action' => 'pazienti/index'));
+                    return $this->redirect(array('action' => '/pazienti/index'));
                 }
                 $this->Session->setFlash(__('Errore nella creazione della scheda paziente'));
             }
@@ -31,6 +31,7 @@ class PazientiController extends AppController {
             $pazienti = $this->Paziente->find('all', array('conditions' => array('OR' => $conditions)));
             $this->set('pazienti', $pazienti);
             $this->Session->delete('Paziente');
+			$this->Session->delete('Visita');
 		}
         
         public function riepilogo ($paziente_id = null)

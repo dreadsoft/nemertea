@@ -16,6 +16,11 @@ App::uses('HtmlHelper', 'View/Helper');
          
          return $p;
      }
+     
+     public function badgize ($value, $class) {
+         return "<span class='badge alert-$class'>" . $value . "</span>";
+         
+     }
  }
 
 ?>

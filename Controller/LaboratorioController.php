@@ -16,29 +16,33 @@ class LaboratorioController extends AppController {
             $this->layout = 'ajax';
             $this->autoLayout = false;
             $tabmodel = ClassRegistry::init($tabella);
+           
             
-            if ($id != null) {
+            if ($id !== null) {
                 $contenuto = $tabmodel->findById($id);
                 $this->request->data = $contenuto;
             }
             else {
-                $contenuto = "";
-                $schema = $tabmodel->getColumnTypes();
-                $this->set('schema', array_keys($schema));
-                
-                $lab_shadow = ClassRegistry::init("lab_shadow");
-                $label = $lab_shadow->find('list', array(
-                    'fields' => array(
-                        "esame", "label"
-                    ),
-                    'conditions' => array(
-                        "tabella" => $tabella,
-                    ),
-                    'recursive' => 0
-                ));
-                $this->set("label", $label);
-               
+                $contenuto = '';
             }
+            
+
+            $schema = $tabmodel->getColumnTypes();
+            $this->set('schema', array_keys($schema));
+
+            $lab_shadow = ClassRegistry::init("lab_shadow");
+            $label = $lab_shadow->find('list', array(
+                'fields' => array(
+                    "esame", "label"
+                ),
+                'conditions' => array(
+                    "tabella" => $tabella,
+                ),
+                'recursive' => 0
+            ));
+            $this->set("label", $label);
+               
+            
             
                         
             $this->set('contenuto', $contenuto);
@@ -133,8 +137,26 @@ class LaboratorioController extends AppController {
             ));
             asort($indagini_laboratorio);
             
+            /*
+             * salvo l'array originale e lo invio alla view
+             * serve per il pulsante "Modifica esami"
+             */
+            $this->set('indagini_laboratorio', $indagini_laboratorio);
+            
             // Elimino emogasanalisi dalle analisi di laboratorio
             unset($indagini_laboratorio['emogasanalisi']);
+            
+            if (isset($indagini_laboratorio['lab_parametri'])) {
+                unset($indagini_laboratorio['lab_parametri']);
+                $indagini_laboratorio = array_merge(array('lab_parametri' => 'parametri'), $indagini_laboratorio);
+                
+            }
+            
+           // print_r($indagini_laboratorio);
+           //exit();
+
+                
+            
             
             // Servono solo gli identificativi delle tabelle
             $tabelle = array_keys($indagini_laboratorio);
@@ -175,6 +197,53 @@ class LaboratorioController extends AppController {
              * --------------------------------------------------
              */
             $this->set('dati', $dati);
+        }
+        
+        function ultimi_esami ($paziente_id = null)
+        {
+            $this->layout = 'ajax';
+            $this->autoLayout = false;            
+            /*
+             * ------------------------------------------
+             * Tabelle da caricare
+             * ------------------------------------------
+             */
+            $this->loadModel('Indagine');
+            $indagini_laboratorio = $this->Indagine->find('list', array(
+                'fields' => array('Indagine.tabella', 'Indagine.nome'),
+                'conditions' => array('Indagine.attiva' => '1', 'Indagine.tipo' => 'laboratorio'),
+            ));
+            asort($indagini_laboratorio);
+            $tab_laboratorio = array_keys($indagini_laboratorio);
+            
+            /*
+             * Imposto le opzioni della richiesta elenco
+             * record ordinati per data, con limite massimo di due per esame
+             */
+            if ($paziente_id === null) $paziente_id = $this->Session->read('Paziente.id');
+            $opzioni_elenco = array(
+                'paziente_id'   => $paziente_id,
+                'order'         => 'data DESC',
+                'limit'         => '2'
+            );
+            $elenco = $this->Laboratorio->raccogli_esami($tab_laboratorio, $opzioni_elenco);
+            
+            $this->set('destinazione', $elenco['destinazione']);
+            $this->set('indagini_laboratorio', $indagini_laboratorio);
+
+            
+        }
+        
+        public function elimina ($tabella, $id)
+        {
+            $this->layout = 'ajax';
+            $this->autoLayout = false;
+            
+            $tabmodel = ClassRegistry::init($tabella);
+            $tabmodel->delete($id);
+            
+            $visita_id = $this->Session->read('Visita.id');
+            $this->redirect("/visite/apri/$visita_id#areaEsamiDiLaboratorio");
         }
 }
 ?>

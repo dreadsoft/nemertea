@@ -115,6 +115,7 @@ class AnamnesiController extends AppController {
             $this->Anamnesi->save($anamnesi);
             
             $this->set('anamnesi', $anamnesi);
+			$this->redirect("/anamnesi/paziente/" . $anamnesi['paziente_id']);
 	}
         
         

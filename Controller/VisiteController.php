@@ -81,11 +81,7 @@ class VisiteController extends AppController {
         {
             
            $this->data = $this->Visita->findById($id);
-           $this->Session->write('Paziente.id', $this->data['Paziente']['id']);
-           $this->Session->write('Paziente.nome', 
-                   $this->data['Paziente']['cognome'] . " " . 
-                   $this->data['Paziente']['nome'] 
-           );
+           $this->Session->write('Paziente', $this->data['Paziente']);
            
            $this->Session->write('Visita.id', $this->data['Visita']['id']);
            
@@ -99,6 +95,8 @@ class VisiteController extends AppController {
                 'conditions' => array('Indagine.attiva' => '1', 'Indagine.tipo' => 'laboratorio'),
             ));
             asort($indagini_laboratorio);
+            
+            unset($indagini_laboratorio['lab_parametri']);
             
             $pulsante_laboratorio = "";
             foreach ($indagini_laboratorio as $tab => $indagine) {
@@ -156,5 +154,10 @@ class VisiteController extends AppController {
             $paziente_id = $this->Session->read('Paziente.id');
             $this->redirect("/visite/elenco/$paziente_id");
         }
+        
+        
+        
+       
+        
 }
 ?>

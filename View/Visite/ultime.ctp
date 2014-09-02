@@ -1,3 +1,4 @@
+<li><a class="text-center"ble><strong>Ultime visite</strong></a></li>
 <?php
 foreach($ultime_visite as $v) {
     echo "<li>";
